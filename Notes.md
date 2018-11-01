@@ -71,3 +71,38 @@
     #  article.content
     #end
   #end
+  
+  
+  ########################################################
+  ########################################################
+  #from cli.rb
+    #def scrape_for_featured_articles
+  #  @scraped = Scraper.new
+  #end
+  
+  #def scrape_selected_article(selected)
+  #  Scraper.add_content_to_article(selected) if selected.content == nil
+  #end
+  
+  #def ask_user_to_pick_article
+  #  "Please enter a number between 1 to 5."
+  #end
+  
+    #def ask_user_read_another
+  #  puts ""
+  #  puts "Want to read another article? Enter 1 to see the list again. Enter anything else to quit."
+  #end
+  
+  #def pick_another_article?
+  #  puts ""
+  #  puts "Want to read another article? Enter 1 to see the list again. Enter anything else to quit."
+  #  number = convert_to_i(get_user_input)
+  #  print_articles if number == 1
+  #  pick_article if number == 1
+  #end
+  
+    #def print_selected_article(input)
+    #Scraper.add_content_to_article(Articles.all[input-1]) if Articles.all[input-1].content == nil
+    #puts Articles.all[input-1].content
+    #puts scrape_selected_article(Articles.all[input-1])
+  #end
