@@ -5,6 +5,19 @@ class CommandLineInterface
   def initialize
     Scraper.create_articles_from_carousel
   end
+
+  def run
+    continue = true
+    greetings
+    while continue == true
+      print_articles
+      pick_article
+      puts ""
+      puts "Want to read another article? Enter 1 to see the list again. Enter anything else to quit."
+      number = convert_to_i(get_user_input)
+      continue = false if number != 1
+    end
+  end
   
   def greetings
     puts "Greetings! Below are articles currently featured on howstuffworks.com!"
@@ -17,6 +30,11 @@ class CommandLineInterface
     Articles.all.each do |article|
       puts count
       puts article.title
+      number = article.title.length
+      title_line = ""
+      number.times {title_line += "-"}
+      puts title_line
+      #binding.pry
       puts article.blurb
       puts ""
       count+=1
@@ -52,17 +70,4 @@ class CommandLineInterface
     validating_loop(input)
   end
 
-  def run
-    continue = true
-    greetings
-    while continue == true
-      print_articles
-      pick_article
-      puts ""
-      puts "Want to read another article? Enter 1 to see the list again. Enter anything else to quit."
-      number = convert_to_i(get_user_input)
-      continue = false if number != 1
-    end
-  end
-  
 end
