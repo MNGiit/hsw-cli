@@ -8,7 +8,7 @@ class CommandLineInterface
 
   def run
     continue = true
-    greetings
+    puts "Greetings! Below are articles currently featured on howstuffworks.com! \n\n"
     while continue == true
       print_articles
       pick_article
@@ -17,11 +17,6 @@ class CommandLineInterface
       number = convert_to_i(get_user_input)
       continue = false if number != 1
     end
-  end
-  
-  def greetings
-    puts "Greetings! Below are articles currently featured on howstuffworks.com!"
-    puts ""
   end
   
   def print_articles
