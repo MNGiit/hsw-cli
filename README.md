@@ -1,8 +1,10 @@
 # Hsw::Cli
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/hsw/cli`. To experiment with that code, run `bin/console` for an interactive prompt.
+Hello! Use this piece of code to scrape interesting articles from howstuffworks.com. To do this, simply type: 
 
-TODO: Delete this and the text above, and describe your gem
+ruby bin/run
+
+It will print articles currently featured on the homepage, with title and blurb. Then it will ask to pick an article from the list. Pick any article and it will print the content. Finally it will ask whether to pick another article to read or quit.
 
 ## Installation
 
