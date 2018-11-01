@@ -25,19 +25,14 @@ class CommandLineInterface
   end
   
   def print_articles
-    count = 1
-    
-    Articles.all.each do |article|
-      puts count
-      puts article.title
-      number = article.title.length
+    Articles.all.each_with_index do |article, index|
+      puts "#{index+1}) #{article.title}"
+      number = article.title.length + 3
       title_line = ""
       number.times {title_line += "-"}
       puts title_line
-      #binding.pry
       puts article.blurb
-      puts ""
-      count+=1
+      puts "\n"
     end
   end
 
