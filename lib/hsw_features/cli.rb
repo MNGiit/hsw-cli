@@ -22,7 +22,7 @@ class CommandLineInterface
   def print_articles
     Articles.all.each_with_index do |article, index|
       puts "#{index+1}) #{article.title}"
-      number = article.title.length + 3
+      number = article.title.length + "#{index+1}) ".length
       title_line = ""
       number.times {title_line += "-"}
       puts title_line
