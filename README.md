@@ -24,7 +24,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+First type this:
+
+ruby bin/run
+
+It will then print a list of articles, and ask to pick one to read. After reading one, it's possible to read another article.
 
 ## Development
 
